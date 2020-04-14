@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="head">
-      <h1>CARREGADORES <BR> AGRÍCOLAS</h1>
+      <h1>CARREGADORES <br> AGRÍCOLAS</h1>
       <h2>Simples para seu trator, essencial para seu trabalho.</h2>
     </div>
     <div class="photo"></div>
