@@ -1,14 +1,14 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+  <div class="app">
+    <div class="navi">
+      <!--<router-link to="/">Home</router-link> | -->
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,8 +16,9 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+.navi {
+  height: 50px;
+  padding: 0px;
 }
 
 #nav a {
@@ -27,5 +28,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+body{
+  margin: 0px;
 }
 </style>
