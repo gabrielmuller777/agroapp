@@ -15,9 +15,9 @@
       </div>
       <div class="frame">
         <img class="photo" src="../assets/seriel.jpg"/>
-            <span class="btn"><h3 class="txtbtn">ESPECIFICAÇÕES</h3></span>
-            <span class="btn"><h3 class="txtbtn">OPCIONAIS</h3></span>
-            <span class="btn"><h3 class="txtbtn">ACESSÓRIOS</h3></span>
+            <span class="btn1"><h3 class="txtbtn">ESPECIFICAÇÕES</h3></span>
+            <span class="btn2"><h3 class="txtbtn">OPCIONAIS</h3></span>
+            <span class="btn3"><h3 class="txtbtn">ACESSÓRIOS</h3></span>
         </div>
       <div class="frame">
         <img class="photo" src="../assets/phd.jpg"/>
@@ -85,11 +85,25 @@ h2{
  -o-filter:      grayscale(100%);
   cursor: pointer;
 }
-.frame:hover > .btn{
+.frame:hover > .btn1{
   width: 60%;
   cursor: pointer;
+  transition: 0.3s;
+  opacity: 100%;
 }
-.btn {
+.frame:hover > .btn2{
+  width: 60%;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 100%;
+}
+.frame:hover > .btn3{
+  width: 60%;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 100%;
+}
+.btn1{
   position: absolute;
   top: 50px;
   left: 0px;
@@ -99,11 +113,29 @@ h2{
   transition: width 0.3s ease-in-out;
   opacity: 0%;
 }
-.frame:hover > .btn{
-
-  transition: 0.3s;
-  opacity: 100%;
+.btn2 {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 20%;
+  min-height: 50px;
+  background-color: #d91920ff;
+  transition: width 0.3s ease-in-out;
+  opacity: 0%;
+  margin-top: 100px;
 }
+.btn3 {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 20%;
+  min-height: 50px;
+  background-color: #d91920ff;
+  transition: width 0.3s ease-in-out;
+  opacity: 0%;
+  margin-top: 200px;
+}
+
 .logo{
   max-width: 600px;
   margin: auto;
