@@ -15,8 +15,10 @@
       </div>
       <div class="frame">
         <img class="photo" src="../assets/seriel.jpg"/>
-        <span class="btn"></span>
-      </div>
+            <span class="btn"><h3 class="txtbtn">ESPECIFICAÇÕES</h3></span>
+            <span class="btn"><h3 class="txtbtn">OPCIONAIS</h3></span>
+            <span class="btn"><h3 class="txtbtn">ACESSÓRIOS</h3></span>
+        </div>
       <div class="frame">
         <img class="photo" src="../assets/phd.jpg"/>
         <span class="btn"></span>
@@ -38,6 +40,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.txtbtn{
+  color: white;
+}
+
 h1 {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-weight: bolder;
@@ -90,6 +97,12 @@ h2{
   min-height: 50px;
   background-color: #d91920ff;
   transition: width 0.3s ease-in-out;
+  opacity: 0%;
+}
+.frame:hover > .btn{
+
+  transition: 0.3s;
+  opacity: 100%;
 }
 .logo{
   max-width: 600px;
