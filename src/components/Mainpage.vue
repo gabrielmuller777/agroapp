@@ -5,12 +5,23 @@
       <h2>Simples para seu trator, essencial para seu trabalho.</h2>
     </div>
     <div class="photopai">
+      <div class="frame">
         <img class="photo" src="../assets/seriem.jpg"/>
+        <span class="btn"></span>
+      </div>
+      <div class="frame">
         <img class="photo" src="../assets/seriet.jpg"/>
+        <span class="btn"></span>
+      </div>
+      <div class="frame">
         <img class="photo" src="../assets/seriel.jpg"/>
+        <span class="btn"></span>
+      </div>
+      <div class="frame">
         <img class="photo" src="../assets/phd.jpg"/>
+        <span class="btn"></span>
+      </div>
     </div>
-
     <div >
       <img class="logo" src="../assets/logo.png" />
     </div>
@@ -55,7 +66,10 @@ h2{
  transition: grayscale 1s;
  filter: gray;
 }
-.photo:hover{
+.frame {
+  position: relative;
+}
+.frame:hover > .photo{
   object-position: 90% 10%;
   filter: none;
  -webkit-filter: grayscale(100%);
@@ -64,16 +78,29 @@ h2{
  -o-filter:      grayscale(100%);
   cursor: pointer;
 }
+.frame:hover > .btn{
+  width: 60%;
+  cursor: pointer;
+}
+.btn {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 20%;
+  min-height: 50px;
+  background-color: #d91920ff;
+  transition: width 0.3s ease-in-out;
+}
 .logo{
   max-width: 600px;
   margin: auto;
   padding: 50px;
 }
 .photopai{
+  display: flex;
+  flex-direction: row;
   height: 400px;
-}
-body{
-  background-image: url("../assets/phd.jpg");
-  background-color: black;
+  max-width: 1600px;
+  margin: auto;
 }
 </style>
