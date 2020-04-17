@@ -7,7 +7,10 @@
     <div class="photopai">
       <div class="frame">
         <img class="photo" src="../assets/seriem.jpg"/>
-        <span class="btn"></span>
+        <span class="btn spec"><label class="btnlabel">ESPECIFICAÇÕES</label><img class="btnimg" src="../assets/botao.png" alt="botao"></span>
+        <span class="btn opt"><label class="btnlabel">OPCIONAIS</label><img class="btnimg" src="../assets/botao.png" alt="botao"></span>
+        <span class="btn ace"><label class="btnlabel">ACESSÓRIOS</label><img class="btnimg" src="../assets/botao.png" alt="botao"></span>
+        <img class="serie" src="../assets/labelm.png" alt="labelm"/>
       </div>
       <div class="frame">
         <img class="photo" src="../assets/seriet.jpg"/>
@@ -68,6 +71,7 @@ h2{
 }
 .frame {
   position: relative;
+  overflow: hidden;
 }
 .frame:hover > .photo{
   object-position: 90% 10%;
@@ -76,20 +80,55 @@ h2{
  -moz-filter:    grayscale(100%);
  -ms-filter:     grayscale(100%);
  -o-filter:      grayscale(100%);
-  cursor: pointer;
 }
 .frame:hover > .btn{
-  width: 60%;
+  left: 0;
   cursor: pointer;
+  opacity: 1;
 }
 .btn {
   position: absolute;
+  max-height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0.7;
+}
+.btn:hover > .btnimg{
+  max-height: 51px;
+}
+.btn.spec {
   top: 50px;
-  left: 0px;
-  width: 20%;
-  min-height: 50px;
-  background-color: #d91920ff;
-  transition: width 0.3s ease-in-out;
+  left: -270px;
+  transition:  0.3s;
+}
+.btn.opt {
+  top: 110px;
+  left: -270px;
+  transition:  0.3s 0.1s;
+}
+.btn.ace {
+  top: 170px;
+  left: -270px;
+  transition:  0.3s 0.2s;
+}
+.btnimg {
+  max-height: 50px;
+}
+.btnlabel {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.serie {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  max-height: 40px;
 }
 .logo{
   max-width: 600px;
