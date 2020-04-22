@@ -1,9 +1,10 @@
 <template>
   <div class="app">
-    <div class="navi">
+    <div class="navbar">
       <!--<router-link to="/">Home</router-link> | -->
     </div>
     <router-view/>
+    <div class="footer"></div>
   </div>
 </template>
 
@@ -14,23 +15,23 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: white;
 }
-
-.navi {
-  height: 50px;
+.navbar {
+  min-height: 50px;
   padding: 0px;
+  background-color: #4f1013;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.footer {
+  width: 100%;
+  min-height: 70px;
+  padding: 0px;
+  background-color: #4f1013;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
 body{
+  background-color: #4f1013;
   margin: 0px;
+  min-width: 100%;
+  min-height: 100%;
 }
 </style>
