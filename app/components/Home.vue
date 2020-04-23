@@ -1,16 +1,21 @@
 <template>
     <Page>
-        <ActionBar class="banana">
-            <Label text="Homeeeeee"></Label>
+        <ActionBar class="actionbar">
+            <StackLayout orientation="horizontal">
+                <Label text="AgraoApp" fontSize="24" verticalAlignment="center" />
+            </StackLayout>
         </ActionBar>
 
-        <GridLayout>
-            <Label class="info">
-                <FormattedString>
-                    <Span :text="message"/>
-                </FormattedString>
-            </Label>
+        <GridLayout columns="1*, 1*" rows="1*, 1*">
+
+                <Image src="~/assets/images/M.jpg" row="0" col="0" stretch="fill"></Image>
+                <Image src="~/assets/images/T.jpg" row="0" col="1" stretch="fill"></Image>
+                <Image src="~/assets/images/L.jpg" row="1" col="0" stretch="fill"></Image>
+                <Image src="~/assets/images/phd.jpg" row="1" col="1" stretch="fill"></Image>
+                <Image src="~/assets/images/logo.png" row="2" col="0"></Image>
+
         </GridLayout>
+        
     </Page>
 </template>
 
@@ -34,7 +39,7 @@ var banene = []
         vertical-align: center;
     }
 
-    .banana {
+    .actionbar {
         background-color: red;
     }
 </style>
