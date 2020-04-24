@@ -6,21 +6,20 @@
             </StackLayout>
         </ActionBar>
 
-        <GridLayout columns="1*, 1*" rows="1*, 1*">
+        <GridLayout columns="auto, auto" rows="auto, auto">
 
-                <Image src="~/assets/images/M.jpg" row="0" col="0" stretch="fill"></Image>
-                <Image src="~/assets/images/T.jpg" row="0" col="1" stretch="fill"></Image>
-                <Image src="~/assets/images/L.jpg" row="1" col="0" stretch="fill"></Image>
-                <Image src="~/assets/images/phd.jpg" row="1" col="1" stretch="fill"></Image>
-                <Image src="~/assets/images/logo.png" row="2" col="0"></Image>
+                <Image class="teste" src="~/assets/images/M.jpg" row="0" col="0" stretch="none"></Image>
+                <Image class="teste" src="~/assets/images/T.jpg" row="0" col="1" stretch="none"></Image>
+                <Image class="teste" src="~/assets/images/L.jpg" row="1" col="0" stretch="none"></Image>
+                <Image class="teste" src="~/assets/images/phd.jpg" row="1" col="1" stretch="none"></Image>
 
         </GridLayout>
-        
+        <!-- <Image src="~/assets/images/logo.png" row="2" col="0" stretch="Fill"></Image>  -->
+         
     </Page>
 </template>
 
 <script>
-
 var banene = []
     export default {
         computed: {
@@ -33,6 +32,10 @@ var banene = []
 
 <style scoped>
 
+    .teste{
+        width: 50%;
+    }
+
     .info {
         font-size: 20;
         horizontal-align: center;
@@ -42,4 +45,6 @@ var banene = []
     .actionbar {
         background-color: red;
     }
+
+
 </style>
