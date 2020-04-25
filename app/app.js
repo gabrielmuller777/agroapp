@@ -1,5 +1,5 @@
 import Vue from "nativescript-vue";
-import Home from "./components/Home";
+import Master from "./components/Master";
 import First from "./components/First";
 
 
@@ -7,11 +7,11 @@ new Vue({
 
     template: `
         <Frame>
-            <Home />
+            <Master />
         </Frame>`,
 
     components: {
-        Home,
+        Master,
         First
     }
 }).$start();
