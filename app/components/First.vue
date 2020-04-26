@@ -1,9 +1,9 @@
 <template>
     <Page>
         <ActionBar class="actionbar">
-            <StackLayout orientation="vertical" >
+            <FlexboxLayout orientation="vertical" >
                 <Label  text="MarispanApp" fontSize="24" verticalAlignment="center" margin="2rem" padding="2rem"/> 
-            </StackLayout>
+            </FlexboxLayout>
         </ActionBar>
 
         <ScrollView>
@@ -33,7 +33,7 @@
         <StackLayout orientation="vertical" >
 
            <Image class="logo" src="~/assets/images/logo.png" stretch="none" horizontalAlignment="center" ></Image>
-
+             <Button class="back" text="Voltar" @tap="onButtonTap" />
         </StackLayout>
 
                 </StackLayout>
@@ -43,12 +43,26 @@
 </template>
 
 <script>
+import Master from "./Master.vue";
+import Seriem from "./Seriem.vue";
+
     export default {
-        name: "First"
+        name: "First",
+        methods: {
+    onButtonTap() {
+      this.$navigateTo(Seriem)
+    }
+  }  
+
     };
 </script>
 
 <style scoped>
+
+    .back{
+        background-color: #d91920;
+        color: white;
+    }
 
     .teste{
         width: 50%;
@@ -72,6 +86,6 @@
         color: #d91920;
     }
     .text2 {
-        color: yellow;
+        color: black;
     }
 </style>
