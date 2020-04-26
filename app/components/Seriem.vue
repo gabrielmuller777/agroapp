@@ -9,23 +9,32 @@
         <ScrollView>
 
         <StackLayout>
+        <StackLayout>
+
+            <Image class="ribbon" src="~/assets/images/redm.png" row="0" col="0" stretch="aspectFit" horizontalAlignment="left"></Image>
+
+        </StackLayout>
 
 
 
 
         <GridLayout class="grid1" columns="auto, auto" rows="auto, auto, auto, auto">
-                <Image class="ribbon" src="~/assets/images/redm.png" row="0" col="0" stretch="aspectFit" horizontalAlignment="left" colspan="2"></Image>
-                
-
                 <Image class="teste" src="~/assets/images/M.jpg" row="1,2" col="0" stretch="aspectFit"></Image>
+
                
 
 
         </GridLayout>
         <StackLayout orientation="vertical" >
+           <Button class="back" text="ESPECIFICAÇÕES" @tap="especicacoes" />
+           <Button class="back" text="OPCIONAIS" @tap="opcionais" />
+           <Button class="back" text="ACESSÓRIOS" @tap="acessorios" />
+
 
            <Image class="logo" src="~/assets/images/logo.png" stretch="none" horizontalAlignment="center" ></Image>
-             <Button class="back" text="Voltar" @tap="onButtonTap" />
+            <Button class="back" text="Voltar" @tap="onButtonTapm" />
+
+
         </StackLayout>
 
                 </StackLayout>
@@ -36,12 +45,24 @@
 
 <script>
 import Master from "./Master.vue";
-
+import First from "./First.vue";
+import Especificacoes from "./Especificacoes.vue";
+import Opcionais from "./Opcionais.vue";
+import Acessorios from "./Acessorios.vue";
     export default {
         name: "Seriem",
         methods: {
-    onButtonTap() {
-      this.$navigateBack(Master)
+    onButtonTapm() {
+      this.$navigateTo(First)
+    },
+    especificacoes() {
+        this.$navigateTo(Especificacoes)
+    },
+    opcionais() {
+      this.$navigateTo(Opcionais)
+    },
+    acessorios() {
+        this.$navigateTo(Acessorios)
     }
   }  
 
@@ -56,7 +77,7 @@ import Master from "./Master.vue";
     }
 
     .teste{
-        width: 50%;
+        width: 100%;
     }
 
     .actionbar {

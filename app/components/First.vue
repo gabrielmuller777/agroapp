@@ -17,10 +17,10 @@
 
 
         <GridLayout class="grid1" columns="auto, auto" rows="auto, auto, auto, auto">
-                <Image class="ribbon" src="~/assets/images/redm.png" row="0" col="0" stretch="aspectFit" horizontalAlignment="left"></Image>
+                <Image class="ribbon" src="~/assets/images/redm.png" row="0" col="0" stretch="aspectFit" horizontalAlignment="left" @tap="seriem"></Image>
                 <Image class="ribbon" src="~/assets/images/redt.png" row="0" col="1" stretch="aspectFit" horizontalAlignment="right"></Image>
 
-                <Image class="teste" src="~/assets/images/M.jpg" row="1" col="0" stretch="aspectFit"></Image>
+                <Image class="teste" src="~/assets/images/M.jpg" row="1" col="0" stretch="aspectFit" @tap="seriem"></Image>
                 <Image class="teste" src="~/assets/images/T.jpg" row="1" col="1" stretch="aspectFit"></Image>
                 <Image class="teste" src="~/assets/images/L.jpg" row="2" col="0" stretch="aspectFit"></Image>
                 <Image class="teste" src="~/assets/images/phd.jpg" row="2" col="1" stretch="aspectFit"></Image>
@@ -50,7 +50,10 @@ import Seriem from "./Seriem.vue";
         name: "First",
         methods: {
     onButtonTap() {
-      this.$navigateTo(Seriem)
+      this.$navigateTo(Master)
+    },
+    seriem() {
+        this.$navigateTo(Seriem)
     }
   }  
 
