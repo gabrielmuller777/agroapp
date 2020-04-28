@@ -1,45 +1,58 @@
 <template>
   <div class="app">
-    <div class="navbar">
-      <!--<router-link to="/">Home</router-link> | -->
+    <div class="header">
+      <img src="../src/assets/images/logowhite.png" style="height: 30px">
     </div>
     <router-view/>
-    <div class="footer">
-      <img class="logo" src="../src/assets/images/logowhite.png" alt="logowhite">
-    </div>
+    <b-navbar fixed=bottom style="backgroundColor: #4f1013">
+      <div class="footer">
+        <label>Todos os Direitos Reservados @Marispan Implementos Agricolas 2017</label>
+      </div>
+    </b-navbar>
   </div>
 </template>
 
 <style>
+@font-face {
+  font-family: 'Apex New Book';
+  src: url('./assets/fonts/Apex New Book.otf');
+}
 .app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Apex New Book;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   background-color: white;
-  min-height: 70%;
+  min-height: 100%;
 }
-.navbar {
+.header {
   min-height: 50px;
-  padding: 0px;
-  background-color: #4f1013;
+  padding-top: 10px;
+  background-color: #b00024;
+}
+.nav {
+  padding: 0px !important;
 }
 .footer {
-  width: 100%;
-  padding: 0px;
-  background-color: #4f1013;
-  position: absolute;
-  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  max-height: 70px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 15px;
 }
-body{
+body, html{
   background-color: white;
   margin: 0px;
   min-width: 100%;
   min-height: 100%;
 }
-.logo {
-  max-width: 300px;
-  margin: 20px auto 20px auto;
+@media (max-width: 640px) {
+  .footer {
+    max-height: 70px;
+  }
 }
 </style>
