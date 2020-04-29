@@ -1,32 +1,33 @@
 <template>
   <div class="home">
     <div class="head">
-      <label class="text1">CARREGADORES FRONTAIS</label>
-      <br><label class="text1">AGRÍCOLAS</label>
+      <label class="text1 d-none d-md-block">CARREGADORES FRONTAIS AGRÍCOLAS</label>
+      <label class="text1 d-sm-none">CARREGADORES FRONTAIS</label>
+      <br><label class="text1 d-sm-none">AGRÍCOLAS</label>
       <br><label class="text2">Simples para seu trator, essencial para seu trabalho.</label>
     </div>
     <b-container class="menu">
       <div class="row custom-gutter align-items-center">
         <div class="col-lg-3 col-6">
-          <div class="serie">
+          <div class="serie" @click="serie='seriem', sendSerie()">
             <img class="photo" src="../assets/images/seriem.jpg">
             <img class="serielabel" src="../assets/images/labelm.png" alt="label">
           </div>
         </div>
         <div class="col-lg-3 col-6">
-          <div class="serie">
+          <div class="serie" @click="serie='seriet', sendSerie()">
             <img class="photo" src="../assets/images/seriet.jpg">
             <img class="serielabel" src="../assets/images/labelt.png" alt="label">
           </div>
         </div>
         <div class="col-lg-3 col-6">
-          <div class="serie">
+          <div class="serie" @click="serie='seriel', sendSerie()">
             <img class="photo" src="../assets/images/seriel.jpg">
             <img class="serielabel" src="../assets/images/labell.png" alt="label">
           </div>
         </div>
         <div class="col-lg-3 col-6">
-          <div class="serie">
+          <div class="serie" @click="serie='phd', sendSerie()">
             <img class="photo" src="../assets/images/phd.jpg">
             <img class="serielabel" src="../assets/images/phd.png" alt="label">
           </div>
@@ -39,9 +40,21 @@
 <script>
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-var x = ''
+
 export default {
+  name: 'Home',
+
   data () {
+    return {
+      serie: ''
+    }
+  },
+
+  methods: {
+    sendSerie () {
+      this.$emit('selectedserie',this.serie)
+      this.$router.push({path:'/specs'})
+    }
   }
 }
 </script>
@@ -88,6 +101,7 @@ export default {
     position: relative;
     min-width: 100%;
     min-height: 100%;
+    cursor: pointer;
     overflow: hidden;
     object-fit: cover;
     transition: all 0.3s ease;
