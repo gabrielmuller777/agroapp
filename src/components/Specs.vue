@@ -1,17 +1,26 @@
 <template>
   <div class="specs">
-    <div class="row">
-      <div class="col">
-        <label style="fontSize:100px">{{currentSerie}}</label>
-      </div>
+    <div class="head">
+      <!--<img class="serie" :src="require('../assets/images/'+currentSerie+'label.png')" alt="label">-->
+      <h3>ESPECIFICAÇÕES</h3>
     </div>
+    <b-container fluid>
+      <b-table class="tb" :items="items" :fields="fields" dark="true" striped="true" bordered="true"></b-table>
+    </b-container>
   </div>
 </template>
 
 <script>
+import * as specs from '../assets/lists.js'
 export default {
   name: 'Specs',
   props: ['currentSerie'],
+  data () {
+    return {
+      fields: ['MODELO', 'VERSÃO', 'TRATOR', 'CARGA_MÁX.', 'ALTURA_MÁX.'],
+      items: specs[this.$props.currentSerie],
+    }
+  },
 };
 </script>
 
@@ -27,18 +36,26 @@ export default {
 .specs {
   display: flex;
   flex-direction: column;
-  max-height: 100%;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  font-family: Apex New Book;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  margin: 10px;
+  padding-left: 10px;
   justify-content: center;
   align-items: flex-start;
-  background-color: khaki;
 }
-.photo {
-  object-fit: cover;
-  object-position: 100% 80%;
-  height: 100%;
-  width: 100%;
+.tb {
+  font-size: 10px !important;
+  max-width: 100%;
 }
-.button {
-  background-color: khaki;
+.serie {
+  width: 200px;
+  margin-bottom: 10px;
 }
 </style>

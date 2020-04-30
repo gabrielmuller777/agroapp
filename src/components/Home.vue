@@ -29,7 +29,7 @@
         <div class="col-lg-3 col-6">
           <div class="serie" @click="serie='phd', sendSerie()">
             <img class="photo" src="../assets/images/phd.jpg">
-            <img class="serielabel" src="../assets/images/phd.png" alt="label">
+            <img class="serielabel" src="../assets/images/labelphd.png" alt="label">
           </div>
         </div>
       </div>
