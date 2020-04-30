@@ -107,7 +107,7 @@ export default {
     transition: all 0.3s ease;
   }
   .photo {
-    object-position: -90px 0;
+    object-position: -70px 0;
     width: 150%;
     height: 100%;
     transition: all 0.3s ease;
