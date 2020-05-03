@@ -7,11 +7,9 @@
       <b-icon-search id="icon" class="d-md-none"></b-icon-search>
     </div>
     <router-view :currentSerie="currentSerie" @selectedserie="sendserie($event)"/>
-    <b-navbar fixed=bottom style="backgroundColor: #4f1013">
-      <div class="footer">
-        <label>Todos os Direitos Reservados @Marispan Implementos Agricolas 2017</label>
-      </div>
-    </b-navbar>
+    <div class="footer">
+      <label>Todos os Direitos Reservados @Marispan Implementos Agricolas 2017</label>
+    </div>
   </div>
 </template>
 
@@ -43,7 +41,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: white;
-  min-height: 100%;
+  height: 100%;
+  min-width: 100%;
+  position: relative;
 }
 .header {
   display: flex;
@@ -52,15 +52,13 @@ export default {
   align-items: center;
   padding-right: 20px;
   min-height: 60px;
+  min-width: 100%;
   background-color: #b00024;
   position: relative;
 }
 #menu {
   position: absolute;
-  margin-left: 10px;
-  min-height: 30px;
-  min-width: 30px;
-  left: 0px;
+  left: 10px;
   color: white;
 }
 #logo {
@@ -77,28 +75,50 @@ export default {
   right: 20px;
 }
 .footer {
+  background-color: #4f1013;
+  position: fixed;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   min-width: 100%;
-  max-height: 45px;
+  min-height: 50px;
+  padding-top: 10px;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 15px;
+  font-size: 1.7vh;
+}
+td, th {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+  max-width: 20vw;
+  word-wrap: break-word;
 }
 body, html{
   background-color: white;
   margin: 0px;
   min-width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
-@media (min-width: 640px) {
+@media (min-width: 728px) {
   .footer {
     min-height: 70px;
+    font-size: 2vh;
   }
   .header {
     justify-content: center;
     align-items: center;
+  }
+  td, th {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+  max-width: 20vw;
+  word-wrap: break-word;
+  }
+}
+@media (min-width:1024px) {
+  .footer {
+    font-size: 2vh;
   }
 }
 </style>

@@ -74,10 +74,12 @@ export default {
     max-height: 100%;
     justify-content: center;
     align-items: center;
+    padding-bottom: 70px;
   }
   .head {
     max-height: 100px;
     margin-top: 20px;
+    margin-bottom: 10px;
   }
   .text1 {
     font-family: intro-cond;
@@ -122,10 +124,24 @@ export default {
     .photo {
       object-position: -150px 0;
     }
+    .text1 {
+      font-size: 30px;
+      line-height: 10px;
+    }
+    .text2 {
+      font-size: 25px;
+    }
   }
   @media (min-width: 1024px) {
     .photo {
       object-position: -100px 0;
+    }
+    .text1 {
+      font-size: 30px;
+      line-height: 10px;
+    }
+    .text2 {
+      font-size: 25px;
     }
   }
   @media (min-width: 1280px) {
